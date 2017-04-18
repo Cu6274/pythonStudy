@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 from abc import ABCMeta, abstractmethod
 
-# ’ŠÛƒNƒ‰ƒX
+# æŠ½è±¡ã‚¯ãƒ©ã‚¹
 class CalcNode(metaclass=ABCMeta):
 	@abstractmethod
 	def className(self):
 		pass
-	
 	@abstractmethod
 	def calc(self):
 		pass
 
-#’ŠÛƒNƒ‰ƒX‚Ì’†gBZero,Add,Sub‚Ì3‚Â‚ÌƒNƒ‰ƒX
+#æŠ½è±¡ã‚¯ãƒ©ã‚¹ã®ä¸­èº«ã€‚Zero,Add,Subã®3ã¤ã®ã‚¯ãƒ©ã‚¹
 class classZero(CalcNode):
 	def __init__(self):
 		self.name = "Zero"
@@ -60,12 +59,12 @@ def main():
 	for node in nodes:
 		print(node.className())
 		print(node.calc(val1=2,val2=5))
-		print(node.calc(val2=5,val1=2)) #“ü‚ê‘Ö‚¦‚Ä‚à‘åä•v
-		print(node.calc(2,5))           #•Ï”–¼‚ğÈ‚¢‚Ä‚à‘åä•v
-		print(node.calc(val1=100))      #•Ğ•û‚¾‚¯“ü‚ê‚Ä‚à‘åä•v
-		print(node.calc(val2=100))      #•Ğ•û‚¾‚¯“ü‚ê‚Ä‚à‘åä•v
-		print(node.calc())              #‰½‚à“ü‚ê‚È‚­‚Ä‚à‘åä•v
+		print(node.calc(val2=5,val1=2)) #å…¥ã‚Œæ›¿ãˆã¦ã‚‚å¤§ä¸ˆå¤«
+		print(node.calc(2,5))           #å¤‰æ•°åã‚’çœã„ã¦ã‚‚å¤§ä¸ˆå¤«
+		print(node.calc(val1=100))      #ç‰‡æ–¹ã ã‘å…¥ã‚Œã¦ã‚‚å¤§ä¸ˆå¤«
+		print(node.calc(val2=100))      #ç‰‡æ–¹ã ã‘å…¥ã‚Œã¦ã‚‚å¤§ä¸ˆå¤«
+		print(node.calc())              #ä½•ã‚‚å…¥ã‚Œãªãã¦ã‚‚å¤§ä¸ˆå¤«
 
-#main()‚ğÀs‚·‚é
+#main()ã‚’å®Ÿè¡Œã™ã‚‹
 if __name__== '__main__':
     main()
